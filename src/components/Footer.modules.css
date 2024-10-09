@@ -1,0 +1,14 @@
+/* for main footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 50px;
+
+  a {
+    text-decoration: none;
+    color: #9a9999;
+  }
+}

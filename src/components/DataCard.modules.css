@@ -1,0 +1,123 @@
+/* for wheater card ==== */
+
+#city_name_resultpage {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  padding-bottom: 2px;
+}
+
+.wheater_img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  padding: 0;
+}
+
+.whater_another_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-transform: capitalize;
+  font-family: "Roboto", default;
+  font-weight: bold;
+}
+
+#degrees {
+  font-family: "Jost", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 130px;
+  margin: 0;
+  padding: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.whater_another_data_complement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+
+  p {
+    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .state2 {
+    padding: 0;
+    padding-right: 10px;
+  }
+
+  border-bottom: solid 2px #fff;
+  border-radius: 2rem;
+}
+
+/* to card image */
+
+/* to flag */
+
+#city_name_flag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#country_showed_flag {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  padding-bottom: 2px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* to second data */
+
+.bg_second_data {
+  background: transparent;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+}
+
+.second_data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 10px 0;
+}
+
+/* to activities */
+
+.second_data {
+  display: flex;
+  padding: 10px;
+}
+
+.activitie_img {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  padding-bottom: 0;
+  object-fit: cover;
+  margin-top: 16px;
+}

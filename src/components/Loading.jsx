@@ -1,3 +1,5 @@
+import "./Loading.modules.css";
+
 export default function Loading() {
   return (
     <>

@@ -1,0 +1,58 @@
+/* to watch in he screen */
+
+.timer_on_screen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2px;
+  margin-top: 40px;
+  padding: 0 20px;
+  font-family: "Roboto", default;
+  font-weight: bold;
+
+  h1 {
+    color: #000;
+  }
+
+  .timer_space {
+    color: #fff;
+    padding: 6px;
+  }
+
+  .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    padding: 6px 12px;
+  }
+}
+
+.timer_message {
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 6px;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.all_watch {
+  display: flex;
+  flex-direction: column;
+}
+
+#timer_hours {
+  color: #000;
+}
+
+#timer_minutes {
+  color: #000;
+}
+
+#timer_seconds {
+  color: #000;
+}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Watch.modules.css";
 
 export default function WatchShower(props) {
   const [hours, setHours] = useState(0);

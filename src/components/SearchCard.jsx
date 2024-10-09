@@ -1,17 +1,34 @@
 import { useState } from "react";
 import MainData from "./DataCard";
-import PageFooter from "./Footer";
 
 export default function DataCard() {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [data, setData] = useState("Hidden");
+
   const [search, setSearch] = useState(true);
 
   function HandleClick(ev) {
-    ev.preventDefault();
-    setSearch(false);
-    setData("Showed");
+    const cityIsNumber = +city;
+    const stateIsNumber = +state;
+
+    if (cityIsNumber || stateIsNumber) {
+      return alert(
+        `Ops... Os valores que usou não são permitidos -> ${city} - ${state}\n Tente novamente com valores válido!`
+      );
+    }
+
+    if (city !== "") {
+      ev.preventDefault();
+      setSearch(false);
+      setData("Showed");
+    }
+
+    if (city === "") {
+      return alert(
+        "Ops... Por favor, Preencha o nome da cidade com valores válidos para continuar!"
+      );
+    }
   }
 
   function HandleResearch(ev) {
@@ -40,6 +57,7 @@ export default function DataCard() {
                 placeholder="Ex: São Paulo"
                 className="content"
                 value={city}
+                required
                 onChange={(ev) => setCity(ev.target.value)}
               />
             </section>

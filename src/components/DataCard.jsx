@@ -2,6 +2,7 @@ import WatchShower from "./Watch";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import dataImgs from "../data/data.js";
+import "./DataCard.modules.css";
 
 export default function MainData(props) {
   const ApiKey = "5c1743ecdbd81bf58b166051e223741f";
@@ -13,32 +14,31 @@ export default function MainData(props) {
   const [removeLoading, setRemoveLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      const getData = async () => {
-        let currentData = {};
-        try {
-          // to get city cords
-          const cordApiAdresss = `http://api.openweathermap.org/geo/1.0/direct?q=${props.cityName},${props.cityState},&appid=${ApiKey}`;
-          const cordResult = await fetch(cordApiAdresss);
-          const cordData = await cordResult.json();
-          setCords(cordData);
-          currentData = cordData;
+    const getData = async () => {
+      let currentData = {};
+      try {
+        // to get city cords
+        const cordApiAdresss = `http://api.openweathermap.org/geo/1.0/direct?q=${props.cityName},${props.cityState},&appid=${ApiKey}`;
+        const cordResult = await fetch(cordApiAdresss);
+        const cordData = await cordResult.json();
+        setCords(cordData);
+        currentData = cordData;
 
-          // to get city weather
-          const whatherApiadress = `https://api.openweathermap.org/data/2.5/weather?lat=${currentData[0].lat}&lon=${currentData[0].lon}&lang=pt_br&units=metric&appid=${ApiKey}`;
-          const weatherResult = await fetch(whatherApiadress);
-          const weatherData = await weatherResult.json();
-          setWeather(weatherData);
-          setRemoveLoading(true);
-          setFound(true);
-        } catch (error) {
-          console.log(`!! error detected >> ${error} !!`);
-          setError(true);
-        }
-      };
+        // to get city weather
+        const whatherApiadress = `https://api.openweathermap.org/data/2.5/weather?lat=${currentData[0].lat}&lon=${currentData[0].lon}&lang=pt_br&units=metric&appid=${ApiKey}`;
+        const weatherResult = await fetch(whatherApiadress);
+        const weatherData = await weatherResult.json();
+        setWeather(weatherData);
+        setRemoveLoading(true);
+        setFound(true);
+      } catch (error) {
+        console.log(`!! error detected >> ${error} !!`);
+        setRemoveLoading(true);
+        setError(true);
+      }
+    };
 
-      getData();
-    }, 3000);
+    getData();
   }, [props.cityName, props.cityState]);
 
   // to cheack degrees
@@ -127,10 +127,10 @@ export default function MainData(props) {
   if (found == false) {
     if (removeLoading === false) {
       return <Loading />;
-    } else if (removeLoading === true && error === true) {
+    } else if (error === true) {
       return (
         <>
-          <h2>Ops... Os dados não foram carregados, tente novamente ):</h2>
+          <h2>Ops... Os dados não foram carregados, Tente novamente! ):</h2>
           <br></br>
           <br></br>
           <div className="search_city_btn">
