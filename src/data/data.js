@@ -80,7 +80,11 @@ let data = [
       "../../img/tea-comp.gif",
       "../../img/sofa-comp.gif",
     ],
-    "50d": [".././img/sofa.gif", ".././img/tea.gif", "../../img/pets-comp.gif"],
+    "50d": [
+      "../../img/sofa-comp.gif",
+      "../../img/tea-comp.gif",
+      "../../img/pets-comp.gif",
+    ],
     "50n": [
       "../../img/puzzle-comp.gif",
       "../../img/tea-comp.gif",
