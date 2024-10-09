@@ -18,7 +18,7 @@ export default function MainData(props) {
       let currentData = {};
       try {
         // to get city cords
-        const cordApiAdresss = `http://api.openweathermap.org/geo/1.0/direct?q=${props.cityName},${props.cityState},&appid=${ApiKey}`;
+        const cordApiAdresss = `https://api.openweathermap.org/geo/1.0/direct?q=${props.cityName},${props.cityState},&appid=${ApiKey}`;
         const cordResult = await fetch(cordApiAdresss);
         const cordData = await cordResult.json();
         setCords(cordData);
